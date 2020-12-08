@@ -202,8 +202,11 @@ Using the grade function below do the following:
 */
   
 
+function grade(/*Your Code here */){
+  /*Your Code here */
+  }
   
-  console.log('grade function', grade(85));
+
   
   
 
