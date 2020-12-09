@@ -162,12 +162,52 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters     1 - scissor     2 - rock    3 - paper
 */ 
 
-
+let computer= Math.floor(Math.random() * 3) +1;
 
 function game(user, computer){
   
+  
+  if (computer===1){
+    return "scissor";
+  } else if (computer===2){
+    return "rock";
+  } else if (computer===3){
+    return "paper";
   }
 
+  if (user===computer){
+    return "it's a tie";
+  }
+
+
+  if (user==="scissor"){
+    if (computer==="paper"){
+      return "you win!";
+    } else {
+      return "you lose!";
+    }
+
+  }
+
+  if (user==="paper"){
+    if (computer==="rock"){
+      return "you win!";
+    } else {
+      return "you lose!";
+    }
+
+  }
+  if (user==="rock"){
+    if (computer==="scissor"){
+      return "you win!";
+    } else {
+      return "you lose!";
+    }
+  }
+  
+  }
+
+  console.log(game("rock",computer));
 
 
 
