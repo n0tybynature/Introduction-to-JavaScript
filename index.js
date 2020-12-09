@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18;
+if (votingAge >= 18){
+  console.log(true);
+}
 
 
 /*
@@ -31,8 +34,12 @@ Do the following:
    HINT: no function required
 */
 
+const num1 = 3;
+const num2 = 4;
 
-
+if(num1*num2){
+  console.log();
+}
 
 
 /*
@@ -46,9 +53,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+var num3 = 1999;
+num3.toString();
 
-
-
+console.log(num3);
 /*
 Task 1d - Multiply
  
@@ -163,10 +171,13 @@ Use the game function below to do the following:
 */ 
 
 let computer= Math.floor(Math.random() * 3) +1;
+let user= Math.floor(Math.random() * 3) +1;
+
+ 
+
+
 
 function game(user, computer){
-  
-  
   if (computer===1){
     return "scissor";
   } else if (computer===2){
@@ -174,19 +185,26 @@ function game(user, computer){
   } else if (computer===3){
     return "paper";
   }
-
+ 
   if (user===computer){
     return "it's a tie";
   }
 
-
   if (user==="scissor"){
     if (computer==="paper"){
       return "you win!";
-    } else {
+    } else if(computer==="rock"){
       return "you lose!";
     }
 
+  }
+
+  if (user==="rock"){
+    if (computer==="scissor"){
+      return "you win!";
+    } else if(computer==="paper") {
+      return "you lose!";
+    }
   }
 
   if (user==="paper"){
@@ -197,17 +215,14 @@ function game(user, computer){
     }
 
   }
-  if (user==="rock"){
-    if (computer==="scissor"){
-      return "you win!";
-    } else {
-      return "you lose!";
-    }
-  }
+  
+  
   
   }
+  
+  
 
-  console.log(game("rock",computer));
+  console.log(game(user,computer));
 
 
 
